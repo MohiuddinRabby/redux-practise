@@ -2,7 +2,7 @@ import { combineReducers, createStore } from "redux";
 import { nameReducer } from "../reducers/nameReducer";
 
 const initialState = {
-  name: "Change Name",
+  name: { name: "Change Name" },
 };
 
 const allReducers = combineReducers({ name: nameReducer });
