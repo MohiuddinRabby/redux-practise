@@ -1,13 +1,11 @@
 import { combineReducers, createStore } from "redux";
-import gameReducer from "../reducers/gameReducer";
-import nameReducer from "../reducers/personReducer";
+import { nameReducer } from "../reducers/nameReducer";
 
 const initialState = {
-  game: { name: "Cricket" },
-  name: { name: "Mohiuddin" },
+  name: "Change Name",
 };
 
-const allReducers = combineReducers({ name: nameReducer, game: gameReducer });
+const allReducers = combineReducers({ name: nameReducer });
 const store = createStore(
   allReducers,
   initialState,
